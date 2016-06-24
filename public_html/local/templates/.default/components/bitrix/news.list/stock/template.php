@@ -9,7 +9,7 @@ foreach ($arResult['ITEMS'] as $key=>$item):?>
     <? } ?>
       <div class="stock__item">
         <a name="<?=$s?>__<?=$arResult['SECTIONS'][$item['IBLOCK_SECTION_ID']]['CODE']?>-<?=$item['CODE']?>"></a>
-        <div style="background-image: url(/layout/images/img2.jpg)" class="stock__image"></div>
+        <div style="background-image: url(<?=$item['PREVIEW_PICTURE']['SRC']?>)" class="stock__image"></div>
         <div class="stock__name"><?=$item['~NAME']?></div>
         <div class="stock__description">
           <?=$item['~PREVIEW_TEXT']?>
