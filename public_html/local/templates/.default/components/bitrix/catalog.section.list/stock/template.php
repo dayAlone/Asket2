@@ -16,12 +16,10 @@ if(count($arResult['SECTIONS']) > 0):?>
 		<?$APPLICATION->IncludeComponent("bitrix:news.list", "stock",
 			array(
 				"IBLOCK_ID"            => $arParams['IBLOCK_ID'],
-				"PARENT_SECTION"           => $item['ID'],
+				"PARENT_SECTION"       => $item['ID'],
 				"NEWS_COUNT"           => "20000",
-				"SORT_BY1"             => "SECTION_ID",
+				"SORT_BY1"             => "SORT",
 				"SORT_ORDER1"          => "ASC",
-				"SORT_BY2"             => "SORT",
-				"SORT_ORDER2"          => "ASC",
 				"CACHE_TYPE"           => "A",
 				"SET_TITLE"            => "N"
 			)
