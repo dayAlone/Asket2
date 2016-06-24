@@ -1,0 +1,45 @@
+html, body
+	height 100%
+body
+	font-family 'HelveticaNeue', 'Helvetica Neue', 'Arial', sans-serif
+	min-height 100%
+	background #173b58
+	font-variant: normal
+	-webkit-font-smoothing: antialiased
+	-webkit-overflow-scrolling: touch
+	@media (max-width: scr_sm - 1)
+		overflow: auto !important
+	&.open
+		position: fixed;
+		max-width: 100%
+		width: 100%
+a
+	t all
+
+#panel
+	position fixed
+	top 0
+	left 0
+	width 100%
+	z-index 100000000
+	@media (max-width: scr_sm - 1)
+		display none
+
+.container
+	width 990px
+
+svg
+	t fill
+	path, g
+		t fill
+
+.scroll-fix
+	position fixed
+	width 100%
+	height 100%
+	top 0
+	left 0
+	z-index 300000
+	pointer-events none
+	&--on
+		pointer-events initial

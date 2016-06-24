@@ -1,0 +1,73 @@
+.clients
+    display: flex
+    margin-right -20px
+    margin-left -20px
+    flex-wrap: wrap
+.client
+    margin: 0 20px 60px
+    justify-content: space-between
+    flex-basis: calc(50% - 40px)
+    &__name
+        text-align center
+        font-weight bold
+        margin: 25px 0 20px
+        font-size 20px
+    &__description
+        line-height 1.4
+    &__logo
+        width: 100%
+        text-align center
+        img
+            max-width: 100px
+            max-height: 55px
+            min-height: 55px
+    &__link
+        text-transform uppercase
+        font-weight bold
+        display: flex
+        font-size 10px
+        line-height 1
+        color: #5d6777
+        align-items: center
+        &--blue
+            color blue
+        &--zoom
+            svg
+                margin-right 5px
+        &--play
+            svg
+                margin-left 5px
+        svg
+            size 20px
+            position relative
+            top -1px
+            path
+                fill #5d6777
+        span
+            border-line(alpha(blue, .4), 20px)
+            display inline-block
+            line-height 1.5
+            transition: .3s background
+        &:hover
+            color blue
+            svg path
+                fill blue
+            span
+                border-line(alpha(blue, .4), 10px)
+    &__footer
+        flex-basis: 100%
+
+        border-top: 1px solid #d7dade
+        border-bottom: 1px solid #d7dade
+
+        margin-top 25px
+
+        padding-top 2px
+        .col-xs-4
+            display: flex
+            min-height: 50px
+            align-items: center
+            &.center
+                justify-content: center
+            &.right
+                justify-content: flex-end

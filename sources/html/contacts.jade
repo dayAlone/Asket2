@@ -1,0 +1,30 @@
+include includes/header
+<body class='page page--about'>
+a.page__logo(href='/')
+    img(src='/layout/images/svg/logo.svg' width='125')
+.page__image(style='background-image: url(/layout/images/bg.jpg)')
+.page__content
+    .page__header
+        h1.page__title Contacts
+    .page__scroll.scroll
+        .scroll__wrap
+            .scroll__content
+                .text
+                    h2 Asket-Auto, LLC
+                    .row
+                        .col-xs-5
+                            big
+                                span.blue Tel.: 
+                                | +7495 781-50-78<br/>
+                                span.blue E-mail: 
+                                | info@aket-auto.com
+                        .col-xs-7
+                            big
+                                span.blue Address: 
+                                | 1, Nagatinskaya street, Moscow, 117105, Russia<br/>
+                                span.blue GPS: 
+                                | 55.683065, 37.624655
+                    #map.map(data-map, data-coords="55.683065, 37.624655", data-zoom='16')
+                        
+- var activeNav = 4
+include includes/sidebar

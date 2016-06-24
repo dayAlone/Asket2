@@ -1,0 +1,72 @@
+include includes/header
+<body class='page page--about'>
+a.page__logo(href='/')
+    img(src='/layout/images/svg/logo.svg' width='125')
+.page__image(style='background-image: url(/layout/images/bg.jpg)')
+.page__content
+    .page__header
+        h1.page__title Order
+    .page__scroll.scroll
+        .scroll__wrap
+            .scroll__content
+                .text
+                    h2.xxl-margin-bottom.no-margin-top Please tell us about technics you need and get a prososal from us.
+                    .form
+                        form(data-parsley-validate, action="")
+                            .row
+                                .col-xs-6
+                                    input.form__input(type='text', name='name', placeholder='Your name *', required)
+                                .col-xs-6
+                                    input.form__input(type='text', name='surname', placeholder='Your surname *', required)
+                                .col-xs-6
+                                    input.form__input(type='text', name='company', placeholder='Company')
+                                .col-xs-6
+                                    input.form__input(type='text', name='location', placeholder='Company location (country, city)')
+                                .col-xs-6
+                                    input.form__input(type='text', name='email', placeholder='E-mail *', required)
+                                .col-xs-6
+                                    input.form__input(type='text', name='phone', placeholder='Phone')
+                                .col-xs-6
+                                    .dropdown
+                                        select.dropdown__select(name='type')
+                                            option(value="", selected) Choose type of vehicle you need
+                                            option(value="Vehicle 1") Vehicle 1
+                                            option(value="Vehicle 2") Vehicle 2
+                                            option(value="Vehicle 3") Vehicle 3
+                                        a.dropdown__trigger Choose type of vehicle you need
+                                        .dropdown__frame
+                                            a.dropdown__item(href='#') Vehicle 1
+                                            a.dropdown__item(href='#') Vehicle 2
+                                            a.dropdown__item(href='#') Vehicle 3
+                                        
+                                .col-xs-6
+                                    .dropdown
+                                        select.dropdown__select(name='condition')
+                                            option(value="", selected) Choose condition of vehicle you need
+                                            option(value="New") New
+                                            option(value="Used") Used
+                                        a.dropdown__trigger Choose condition of vehicle you need
+                                        .dropdown__frame
+                                            a.dropdown__item(href='#') New
+                                            a.dropdown__item(href='#') Used
+                                .col-xs-12
+                                    textarea.form__textarea(name='message', placeholder="Message (any additional information)")
+                                
+                            .row
+                                .col-xs-3
+                                    .form__label Enter this code
+                                    .form__captcha.captcha
+                                .col-xs-1
+                                    a.form__refresh(href='#')
+                                        include ../../public_html/layout/images/svg/refresh.svg
+                                .col-xs-3
+                                    .form__label into this field
+                                    input(type='hidden', name='captcha_sid')
+                                    input.form__input(type='text' name='captcha_word', required)
+                                .col-xs-2
+                                    small.form__small All fields marked * <br/>are have to be filled
+                                .col-xs-3.right
+                                    button.form__button(type='submit') Send
+                            
+- var activeNav = 2
+include includes/sidebar

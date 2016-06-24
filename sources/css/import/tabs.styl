@@ -1,0 +1,82 @@
+.tabs
+    display flex
+    justify-content: space-between
+    ul&
+        padding: 0
+        margin: 30px 0 35px
+    &__content
+        display none
+        &.active
+            display block
+            .shake
+              animation: shake 2.875s ease infinite
+              display inline-block
+    &__item
+        flex: 1 1 100%
+        list-style: none
+        padding: 0
+        a
+            display: flex
+            height: 50px
+            box-shadow: inset 0 -2px 0 blue
+            background-color #bfc3c9
+            padding: 0 20px
+            color white
+            align-items: center
+            font-size 20px
+            font-weight bold
+        &.active a
+            background-color blue
+
+
+
+@keyframes shake {
+    0% {
+        transform: rotate(-12deg)
+    }
+    6.95652% {
+        transform: rotate(12deg)
+    }
+    8.69565% {
+        transform: rotate(24deg)
+    }
+    15.65217% {
+        transform: rotate(-24deg)
+    }
+    17.39131% {
+        transform: rotate(-24deg)
+    }
+    24.34782% {
+        transform: rotate(24deg)
+    }
+    26.08696% {
+        transform: rotate(24deg)
+    }
+    33.04348% {
+        transform: rotate(-24deg)
+    }
+    34.78261% {
+        transform: rotate(-24deg)
+    }
+    41.73913% {
+        transform: rotate(24deg)
+    }
+    43.47826% {
+        transform: rotate(24deg)
+    }
+    50.43478% {
+        transform: rotate(-24deg)
+    }
+    52.17391% {
+        transform: rotate(-24deg)
+    }
+    59.13044% {
+        transform: rotate(24deg)
+    }
+    65.21739% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(0deg)
+    }
+}

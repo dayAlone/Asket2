@@ -1,0 +1,70 @@
+.scroll
+    position relative
+    width 100%
+    display flex
+    flex-direction: column
+    min-height: 0
+    &__wrap
+        @media (min-width: scr_sm)
+            max-height: 100%
+            overflow: hidden
+            position relative
+            margin-right -40px
+            padding-right 5px
+            .mobile &
+                overflow: auto
+                -webkit-overflow-scrolling: touch
+
+        @media (min-width: 1600px)
+            margin-right -80px
+            padding-right 50px
+    &__content
+        padding 50px 35px 40px 0
+    @media (min-width: scr_sm)
+        &:after, &:before
+            height 150px
+            z-index 50
+            right 0px
+            width 100%
+            content ""
+            position absolute
+            opacity 0
+            pointer-events: none
+            t opacity
+        &:after
+            background linear-gradient(to top, white 10%, rgba(255,255,255,0) 100%)
+            bottom 0
+        &:before
+            top 0
+            background linear-gradient(to bottom, white 10%, rgba(255,255,255,0) 100%)
+        &--ready
+            &:after
+                opacity 1
+        &--start
+            &:before
+                opacity 1
+        &--end
+            &:after
+                opacity 0
+
+
+.ps-container, .ps-container:hover, .ps-container.ps-in-scrolling
+	> .ps-scrollbar-y-rail
+		right 4px !important
+		background #edeef0
+		opacity 1
+		border-radius 0
+		width 4px
+		t height
+		.dropdown__frame&
+			background transparent
+		.catalog &
+			@media (max-width: scr_lg)
+				right 7px !important
+		>.ps-scrollbar-y
+			opacity 1
+			t height
+			right 0px
+			width 4px
+			border-radius 0
+			background-color blue !important

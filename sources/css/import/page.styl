@@ -1,0 +1,113 @@
+.page
+    display: flex
+    size: 100%
+    min-height: 100vh
+    justify-content: space-between
+    min-width: 1170px
+    min-height: 650px
+    &__more
+        position relative
+        color #000000
+        font-weight bold
+        font-size 13px
+        border-line(alpha(@color, .3), 13.8px)
+        align-items: center
+        margin-top 20px
+        &:hover
+            color blue
+            border-line(alpha(@color, .3), 13.8px)
+        &:before
+            content: ""
+            position absolute
+            width: 20px
+            height: 12px
+            background: url(/layout/images/svg/arrow.svg)
+            background-size contain
+            background-repeat no-repeat
+            right: 100%
+            top: calc(50% - 1px)
+            transform: translate3d(-4px, -50%, 0)
+    &__image
+        position absolute
+        top 0
+        left 0
+        width: 200px
+        height: 100%
+        background-size cover
+        @media (min-width: 1600px)
+            width: 300px
+        &:after
+            position absolute
+            content ""
+            size 100%
+            background alpha(black, .2)
+    &__content
+        flex: 1 1 100%
+        max-height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+        position relative
+        background-color white
+        max-width: calc(100% - 425px)
+        margin-left auto
+        overflow hidden
+        padding 50px 40px 0
+        @media (min-width: 1600px)
+            padding 60px 80px 0
+            max-width: calc(100% - 600px)
+        > *
+            position relative
+            z-index: 2
+    &__scroll
+        margin-right -80px
+        flex: 1 1 100%
+    &__logo
+        position absolute
+        top 50px
+        left 35px
+        z-index: 30
+        @media (min-width: 1600px)
+            left 80px
+    &__footer
+        position absolute
+        bottom 0
+        left 0
+        width: 100%
+    &__header
+        padding: 45px 0 42px
+        position relative
+        border-bottom: 1px solid #bfbfbf
+        justify-content: flex-end
+        flex-direction: row-reverse
+        display flex
+        align-items: center
+        &:before
+            content: ""
+            position absolute
+            top 0
+            left 0
+            display block
+            width: 57px
+            height: 3px
+            background-color: blue
+    &__title
+        font-size 50px
+        margin 0
+        font-weight bold
+        min-width: 50%
+    &--index
+        & ^[0]__content
+            justify-content: flex-end
+            background-color transparent
+            max-width: 100%
+            margin-left 0
+            padding 120px 60px
+        & ^[0]__sidebar
+            background-color white !important
+            .sidebar__address
+                display none
+        & ^[0]__logo
+            @media (min-width: 1600px)
+                left: 60px

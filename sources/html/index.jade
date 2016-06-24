@@ -1,0 +1,48 @@
+include includes/header
+<body class='page page--index'>
+a.page__logo(href='#')
+    img(src='/layout/images/svg/logo.svg' width='125')
+.page__content
+    .slider
+        .slider__item
+            .slider__content
+                .slider__title Asket-Auto
+                .slider__text Here comes subheader, main idea of<br/>company and website or any description<br/>of main activities.
+                
+            .slider__image(style='background-image: url(/layout/images/index.bg.jpg)')
+        .slider__item
+            .slider__content
+                .slider__title Some other title
+                .slider__text Here comes subheader, main idea of<br/>company and website or any description<br/>of main activities.
+                a.slider__button(href='#') Some button
+            .slider__image(style='background-image: url(/layout/images/index.bg.jpg)')
+        .slider__item
+            .slider__content
+                .slider__title Asket-Auto
+                .slider__text Here comes subheader, main idea of<br/>company and website or any description<br/>of main activities.
+            .slider__image(style='background-image: url(/layout/images/index.bg.jpg)')
+    .buttons
+        .buttons__item
+            .buttons__content
+                .buttons__title New stock
+                .buttons__links
+                    a(href='#') Terrain cranes
+                    a(href='#') Utility vehicles
+                    a(href='#') Self-loading vehicles
+                    a(href='#') Trucks
+        .buttons__item
+            .buttons__content
+                .buttons__title Used stock
+                .buttons__links
+                    a(href='#') Terrain cranes
+                    a(href='#') Utility vehicles
+                    a(href='#') Self-loading vehicles
+                    a(href='#') Trucks
+        a.buttons__item(href='#')
+            .buttons__title Order now
+    .page__footer.footer
+        .footer__address 1, Nagatinskaya street, Moscow. 117105, Russia
+        a.footer__radia.radia(href='#' target="_blank")
+            img.radia__logo(src='/layout/images/svg/radia.svg')
+            .radia__text Website development<br/>RADIA Interactive
+include includes/sidebar

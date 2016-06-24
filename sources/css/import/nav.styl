@@ -1,0 +1,18 @@
+.nav
+    display: flex
+    flex-direction: column
+    &__item
+        font-size 30px
+        color black
+        font-weight bold
+        &, &:first-letter
+            transition: .3s all
+        &:focus, &--active, &--active:hover
+            color blue
+        &:not(&--active):hover
+            transform: translateX(-10px)
+            color black
+            &:first-letter
+                color blue
+        & + &
+            margin-top 10px

@@ -1,0 +1,48 @@
+include includes/header
+<body class='page page--about'>
+a.page__logo(href='/')
+    img(src='/layout/images/svg/logo.svg' width='125')
+.page__image(style='background-image: url(/layout/images/bg.jpg)')
+.page__content
+    .page__header
+        h1.page__title Our stock
+    .page__scroll.scroll
+        .scroll__wrap
+            .scroll__content
+                .text
+                    h3 We are always open for mutual beneficial cooperation!
+                    ul.tabs(role='tablist')
+                        li.active.tabs__item(role='presentation')
+                            a(href='#home', aria-controls='home', role='tab', data-toggle='tab') New stock
+                        li.tabs__item(role='presentation')
+                            a(href='#profile', aria-controls='home', role='tab', data-toggle='tab') Used stock
+                    .tab-content
+                        #home.tabs__content.tab-pane.fade.in.active(role='tabpanel')
+                            h2 Terrain cranes
+                            .stock
+                                - var i = 0
+                                while i < 7
+                                    .stock__item(href='#')
+                                        .stock__image(style="background-image: url(/layout/images/img2.jpg)")
+                                        .stock__name Terrain crane Galichanin KS-55713-5V
+                                        .stock__description.
+                                            Year: 2014<br/>
+                                            Additional: Status
+                                        a.stock__request(href='#') Request
+                                    - i++
+                            h2 Terrain cranes
+                            .stock
+                                - var i = 0
+                                while i < 4
+                                    .stock__item(href='#')
+                                        .stock__image(style="background-image: url(/layout/images/img2.jpg)")
+                                        .stock__name Terrain crane Galichanin KS-55713-5V
+                                        .stock__description.
+                                            Year: 2014<br/>
+                                            Additional: Status
+                                        a.stock__request(href='#') Request
+                                    - i++
+                        #profile.tabs__content.tab-pane.fade(role='tabpanel') 
+                            big.shake(style="font-size: 120px") 😱
+- var activeNav = 1
+include includes/sidebar

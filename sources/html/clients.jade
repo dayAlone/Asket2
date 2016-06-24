@@ -1,0 +1,35 @@
+include includes/header
+<body class='page page--about'>
+a.page__logo(href='/')
+    img(src='/layout/images/svg/logo.svg' width='125')
+.page__image(style='background-image: url(/layout/images/bg.jpg)')
+.page__content
+    .page__header
+        h1.page__title Clients
+    .page__scroll.scroll
+        .scroll__wrap
+            .scroll__content
+                .text
+                    .clients
+                        - var i = 0
+                        while i < 9
+                            .client
+                                .client__logo
+                                    img(src='/layout/images/client.png')
+                                .client__name Central Partnership, LLC
+                                .client__description LLC "Asket-Auto" successfully operates on russian market since 2007. We specialize on used vehicles and construction machines, but as well we sell new terrain cranes, utility vehicles, light commercial and heavy trucks. <br/>LLC "Asket-Auto" is an authorized dealer of leading manufacturers of terrain cranes (Ivanovets, Galichanin, Klintsy) and of utility vehicles (Ryazhskiy autorepairing plant and Mcenskiy plant of utility vehicles).
+                                .client__footer
+                                    a.client__link.client__link--zoom(href='#')
+                                        include ../../public_html/layout/images/svg/zoom.svg
+                                        span view scan
+                                    a.client__link.client__link--blue(href='#')
+                                        span read more
+                                    a.client__link.client__link--play(href='#')
+                                        span view video
+                                        include ../../public_html/layout/images/svg/play.svg
+                            - i++
+                                
+                                    
+                        
+- var activeNav = 3
+include includes/sidebar

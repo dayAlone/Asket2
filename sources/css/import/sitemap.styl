@@ -1,0 +1,44 @@
+.map-columns
+    width 100%
+    ul
+        list-style none
+    .map-level-0
+        padding-left 0
+        > li
+            margin-bottom 35px
+            > a
+                font-size 22px
+                color blue2
+                font-weight 300
+
+    .map-level-1
+        padding-left 20px
+        margin-top 10px
+        > li
+            margin-bottom 15px
+            line-height 20px
+            > a
+                font-size 16px
+                font-weight 300
+                position relative
+                &:before
+                    content "—"
+                    position absolute
+                    left -17px
+                    font-size 60%
+                    top -4px
+            ul
+                padding-left 20px
+                margin-top 10px
+                padding-bottom 0px
+                li
+                    margin-bottom 4px
+
+
+    a
+        color blue
+        font-weight 300
+        border-line(alpha(@color, .5))
+        &:hover
+            color blue
+            border-line(alpha(@color, .5), calc(100% + 3px))

@@ -1,0 +1,61 @@
+.stock
+    display: flex
+    margin-right -3px
+    margin-left -3px
+    padding: 0 1px
+    flex-wrap: wrap
+    align-items: flex-start
+    &__image
+        padding-bottom 80%
+        background-color blue
+        margin-right -20px
+        margin-left -20px
+        background-size cover
+        background-position center center
+    &__item
+        margin: 0 3px 35px
+        background-color #e8eaeb
+        flex-basis: calc(25% - 6px)
+        padding: 0 20px 15px
+        line-height 1.3
+        transition: .3s all
+        &:hover
+            transform: translate3d(4px, -4px, 0)
+            box-shadow: -2px 2px 0 0 white, -5px 5px 0 0 alpha(blue, .4)
+            & ^[0]__request
+                transform: translateX(18px)
+                &:before
+                    opacity: 1
+
+    &__request
+        position relative
+        display inline-block
+        &, &:hover
+            color blue
+            font-weight bold
+            font-size 14px
+            border-line(alpha(blue, .4), 14px)
+        &:hover
+            border-line(alpha(blue, .4), 18px)
+        &:before
+            content: ""
+            position absolute
+            width: 15px
+            height: 12px
+            background: url(/layout/images/svg/arrow.svg)
+            background-size contain
+            background-position center right
+            background-repeat no-repeat
+            right: 100%
+            top: calc(50% - 1px)
+            transform: translate3d(-4px, -50%, 0)
+            transition: .3s opacity
+            opacity: 0
+    &__description
+        padding 5px 0 17px
+        font-size 14px
+        color: alpha(black, .7)
+    &__name
+        font-size 16px
+        font-weight bold
+        margin-top 17px

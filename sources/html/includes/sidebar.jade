@@ -1,0 +1,55 @@
+- var nav = [{ name: 'About us', url: '/about.html' }, { name: 'Our stock', url: '/stock.html' }, { name: 'Order', url: '/order.html' }, { name: 'Clients', url: '/clients.html' }, { name: 'Contacts', url: '/contacts.html' }]
+
+.sidebar.page__sidebar
+    .sidebar__header
+        a.sidebar__button(href='#Feedback', data-toggle='modal') Feedback
+    .sidebar__content
+        .nav
+            each val, key in nav
+                - var c = key == activeNav ? "nav__item--active" : ""
+                a(href="#{val.url}", class="nav__item #{c}")= val.name
+    .sidebar__footer
+        a.sidebar__link(href="mailto:info@aket-auto.com") info@aket-auto.com
+        a.sidebar__link(href="tel:+74957815078") +7 (495) 781-50-78
+        .lang
+            a.lang__item.lang__item--active(href='#') Eng
+            a.lang__item(href='#') Rus
+        .sidebar__copyright © 2016 Asket-Auto LLC
+        .sidebar__address 1, Nagatinskaya street, Moscow.<br/>117105, Russia
+
+#Feedback.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            a.modal__close(href='#', data-dismiss='modal')
+                img(src="/layout/images/svg/close.svg", alt="")
+            h2.modal__title Feedback
+            form.form(data-parsley-validate)
+                .row
+                    .col-xs-6
+                        input.form__input(type='text' placeholder='Your name *', name='name', required)
+                    .col-xs-6
+                        input.form__input(type='text' placeholder='Company', name='company')
+                    .col-xs-6
+                        input.form__input(type='email' placeholder='E-mail *', name='email', required)
+                    .col-xs-6
+                        input.form__input(type='text' placeholder='Phone', name='phone')
+                .row
+                    .col-xs-12
+                        textarea.form__textarea(placeholder='Message *', name='message')
+                
+                .row
+                    .col-xs-3
+                        .form__label Enter this code
+                        .form__captcha.captcha
+                    .col-xs-1.center
+                        a.form__refresh(href='#')
+                            include ../../../public_html/layout/images/svg/refresh.svg
+                    .col-xs-3
+                        .form__label into this field
+                        input(type='hidden', name='captcha_sid')
+                        input.form__input(type='text' name='captcha_word', required)
+                    .col-xs-5.right
+                        button.form__button Send
+    
+                .row
+                    .col-xs-12 All fields marked * are have to be filled

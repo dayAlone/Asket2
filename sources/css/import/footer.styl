@@ -1,0 +1,22 @@
+.footer
+    background-color alpha(black, .5)
+    display: flex
+    color alpha(white, .5)
+    height: 65px
+    align-items: center
+    justify-content: space-between
+    padding: 3px 60px 0
+    font-size 11px
+
+.radia
+    display: flex
+    color alpha(white, .5)
+    &:hover
+        color white
+        & ^[0]__logo
+            opacity: 1
+
+    &__logo
+        opacity: .5
+        transition: .3s opacity
+        margin-right 10px

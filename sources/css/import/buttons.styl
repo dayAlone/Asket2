@@ -1,0 +1,59 @@
+.buttons
+    display: flex
+    align-items: flex-end
+    align-self: flex-start
+    &__item
+        width: 185px
+        height: 120px
+        background-color: rgba(0, 0, 0, 0.65)
+        border: 3px solid blue
+        margin-right 10px
+        padding: 15px 20px
+        overflow hidden
+        transition: .3s height .1s cubic-bezier(0.645, 0.045, 0.355, 1), .3s background .1s cubic-bezier(0.645, 0.045, 0.355, 1)
+        a&
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            & ^[0]__title
+                display: inline
+                align-self: flex-start
+                margin-bottom 0
+                border-line(alpha(white, .5), 44px)
+            &:hover
+                background-color blue
+                & ^[0]__title
+                    border-line(alpha(white, .5), 24px)
+        &:not(a):hover
+            background-color blue
+            height: 230px
+            & ^[0]__content
+                transform: translateY(0);
+            & ^[0]__links
+                opacity: 1
+    &__links
+        transition: .3s opacity
+        opacity: 0
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        a
+            color white
+            display: inline
+            font-size 13px
+            border-line(alpha(white, .5), 14px)
+            margin-bottom 7px
+            &:hover
+                color alpha(white, .7)
+                border-line(alpha(white, .5), 18px)
+                transform: translateX(-5px)
+    &__content
+        transform: translateY(55px)
+        transition: .6s transform .1s cubic-bezier(0.645, 0.045, 0.355, 1)
+    &__title
+        font-weight bold
+        color white
+        font-weight bold
+        font-size 22px
+        margin-bottom 15px
+        transition: .3s background .1s cubic-bezier(0.645, 0.045, 0.355, 1)
