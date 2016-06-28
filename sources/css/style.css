@@ -1662,7 +1662,7 @@ a.buttons__item:hover .buttons__title:hover {
   background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(255,255,255,0.5) 50%);
   background-repeat: repeat-x;
   background-size: 2px 2px;
-  background-position: 0 14px;
+  background-position: 0 11px;
 }
 .buttons__links a span:hover {
   text-decoration: none;
@@ -1677,7 +1677,7 @@ a.buttons__item:hover .buttons__title:hover {
   background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(255,255,255,0.5) 50%);
   background-repeat: repeat-x;
   background-size: 2px 2px;
-  background-position: 0 18px;
+  background-position: 0 13px;
 }
 .buttons__links a:hover span:hover {
   text-decoration: none;
