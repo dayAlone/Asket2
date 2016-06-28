@@ -19,13 +19,11 @@
                 display: inline
                 align-self: flex-start
                 margin-bottom 0
-                span
-                    border-line(alpha(white, .5), 44px)
+                border-line(alpha(white, .5), 44px)
             &:hover
                 background-color blue
                 & ^[0]__title
-                    span
-                        border-line(alpha(white, .5), 24px)
+                    border-line(alpha(white, .5), 24px)
         &:not(a):hover
             background-color blue
             height: 230px
@@ -43,12 +41,14 @@
             color white
             display: inline
             font-size 13px
-            border-line(alpha(white, .5), 14px)
             margin-bottom 7px
+            span
+                border-line(alpha(white, .5), 14px)
             &:hover
                 color alpha(white, .7)
-                border-line(alpha(white, .5), 18px)
                 transform: translateX(-5px)
+                span
+                    border-line(alpha(white, .5), 18px)
     &__content
         transform: translateY(55px)
         transition: .6s transform .1s cubic-bezier(0.645, 0.045, 0.355, 1)

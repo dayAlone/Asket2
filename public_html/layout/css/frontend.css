@@ -4888,6 +4888,9 @@ svg g {
   font-weight: bold;
   min-width: 50%;
 }
+.page--index .page__image {
+  display: none;
+}
 .page--index .page__content {
   -o-box-pack: end;
   -ms-flex-pack: end;
@@ -5155,26 +5158,24 @@ a.buttons__item .buttons__title {
   align-self: flex-start;
   -ms-flex-item-align: start;
   margin-bottom: 0;
-}
-a.buttons__item .buttons__title span {
   background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(255,255,255,0.5) 50%);
   background-repeat: repeat-x;
   background-size: 2px 2px;
   background-position: 0 44px;
 }
-a.buttons__item .buttons__title span:hover {
+a.buttons__item .buttons__title:hover {
   text-decoration: none;
 }
 a.buttons__item:hover {
   background-color: #196dc7;
 }
-a.buttons__item:hover .buttons__title span {
+a.buttons__item:hover .buttons__title {
   background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(255,255,255,0.5) 50%);
   background-repeat: repeat-x;
   background-size: 2px 2px;
   background-position: 0 24px;
 }
-a.buttons__item:hover .buttons__title span:hover {
+a.buttons__item:hover .buttons__title:hover {
   text-decoration: none;
 }
 .buttons__item:not(a):hover {
@@ -5214,26 +5215,30 @@ a.buttons__item:hover .buttons__title span:hover {
   color: #fff;
   display: inline;
   font-size: 13px;
+  margin-bottom: 7px;
+}
+.buttons__links a span {
   background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(255,255,255,0.5) 50%);
   background-repeat: repeat-x;
   background-size: 2px 2px;
   background-position: 0 14px;
-  margin-bottom: 7px;
 }
-.buttons__links a:hover {
+.buttons__links a span:hover {
   text-decoration: none;
 }
 .buttons__links a:hover {
   color: rgba(255,255,255,0.7);
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(255,255,255,0.5) 50%);
-  background-repeat: repeat-x;
-  background-size: 2px 2px;
-  background-position: 0 18px;
   -webkit-transform: translateX(-5px);
   -ms-transform: translateX(-5px);
   transform: translateX(-5px);
 }
-.buttons__links a:hover:hover {
+.buttons__links a:hover span {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(255,255,255,0.5) 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 18px;
+}
+.buttons__links a:hover span:hover {
   text-decoration: none;
 }
 .buttons__content {
