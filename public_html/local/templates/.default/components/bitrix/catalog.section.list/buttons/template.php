@@ -7,7 +7,9 @@ if(count($arResult['SECTIONS']) > 1):?>
             <div class="buttons__title"><?=$item['NAME']?></div>
             <div class="buttons__links">
 				<?foreach ($item['CHILD'] as $el):?>
-					<a href="/stock/#<?=$item['CODE']?>__<?=$el['CODE']?>"><?=$el['NAME']?></a>
+					<a href="/stock/#<?=$item['CODE']?>__<?=$el['CODE']?>">
+						<span><?=$el['NAME']?></span>
+					</a>
 				<?endforeach;?></div>
         </div>
     </div>

@@ -19,11 +19,13 @@
                 display: inline
                 align-self: flex-start
                 margin-bottom 0
-                border-line(alpha(white, .5), 44px)
+                span
+                    border-line(alpha(white, .5), 44px)
             &:hover
                 background-color blue
                 & ^[0]__title
-                    border-line(alpha(white, .5), 24px)
+                    span
+                        border-line(alpha(white, .5), 24px)
         &:not(a):hover
             background-color blue
             height: 230px

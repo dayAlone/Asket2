@@ -1596,24 +1596,26 @@ a.buttons__item .buttons__title {
   align-self: flex-start;
   -ms-flex-item-align: start;
   margin-bottom: 0;
+}
+a.buttons__item .buttons__title span {
   background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(255,255,255,0.5) 50%);
   background-repeat: repeat-x;
   background-size: 2px 2px;
   background-position: 0 44px;
 }
-a.buttons__item .buttons__title:hover {
+a.buttons__item .buttons__title span:hover {
   text-decoration: none;
 }
 a.buttons__item:hover {
   background-color: #196dc7;
 }
-a.buttons__item:hover .buttons__title {
+a.buttons__item:hover .buttons__title span {
   background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(255,255,255,0.5) 50%);
   background-repeat: repeat-x;
   background-size: 2px 2px;
   background-position: 0 24px;
 }
-a.buttons__item:hover .buttons__title:hover {
+a.buttons__item:hover .buttons__title span:hover {
   text-decoration: none;
 }
 .buttons__item:not(a):hover {
@@ -2255,10 +2257,6 @@ ul.tabs {
   -ms-flex-pack: stretch;
   -webkit-justify-content: stretch;
   justify-content: stretch;
-  -o-box-align: start;
-  -ms-flex-align: start;
-  -webkit-align-items: flex-start;
-  align-items: flex-start;
 }
 .stock__image {
   padding-bottom: 80%;
