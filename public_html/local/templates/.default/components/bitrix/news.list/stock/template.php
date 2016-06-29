@@ -14,7 +14,7 @@ foreach ($arResult['ITEMS'] as $key=>$item):?>
         <div class="stock__description">
           <?=$item['~PREVIEW_TEXT']?>
         </div>
-        <a href="/order/" class="stock__request">Request</a>
+        <a href="/order/?model=<?=$item['~NAME']?>" class="stock__request">Request</a>
       </div>
 <?endforeach;?>
 </div>
