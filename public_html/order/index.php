@@ -59,11 +59,11 @@ $APPLICATION->SetTitle('Order');
             </div>
           </div>
           <div class="col-xs-12">
-            <textarea name="message" placeholder="Message (any additional information)" class="form__textarea">
-                <? if ($_REQUEST['model']):?>
-                Hello!
-                I would like to request information about <?=$_REQUEST['model']?>
-                <? endif;?>
+            <textarea name="message" placeholder="Message (any additional information)" class="form__textarea"><?
+                if ($_REQUEST['model']):
+                    ?>Hello!
+I would like to request information about <?=$_REQUEST['model']?><?
+                endif;?>
             </textarea>
           </div>
         </div>
