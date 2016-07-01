@@ -6217,6 +6217,8 @@ ul.tabs {
   -webkit-transform: translateY(-40px);
   -ms-transform: translateY(-40px);
   transform: translateY(-40px);
+  max-height: 400px;
+  overflow: auto;
 }
 .dropdown__select {
   opacity: 0;
@@ -6247,7 +6249,8 @@ ul.tabs {
     font-size: 15px;
   }
 }
-.dropdown__item:hover {
+.dropdown__item:hover,
+.dropdown__item:focus {
   background-color: rgba(255,255,255,0.1);
   color: #fff;
 }

@@ -14,6 +14,8 @@
         visibility: hidden
         z-index: 10
         transform: translateY(-40px)
+        max-height: 400px
+        overflow: auto
     &__select
         opacity 0
         position absolute
@@ -34,7 +36,7 @@
         padding: 4px 16px 0
         @media (min-width: 1600px)
             font-size 15px
-        &:hover
+        &:hover, &:focus
             background-color alpha(white,.1)
             color white
     &__trigger
