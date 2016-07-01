@@ -9,7 +9,7 @@
       <div class="client__footer">
           <div class="row">
               <div class="col-xs-4">
-                  <?if (count($item["PROPERTIES"]['GALLERY']['VALUE']) > 0):?>
+                  <?if ($item["PROPERTIES"]['GALLERY']['VALUE'] && count($item["PROPERTIES"]['GALLERY']['VALUE']) > 0):?>
                     <a href="#" data-images='<?=json_encode($item["PROPERTIES"]['GALLERY']['VALUE'])?>' class="client__link client__link--zoom"><?=svg('zoom')?><span>view scan</span></a>
                   <?endif;?>
               </div>
