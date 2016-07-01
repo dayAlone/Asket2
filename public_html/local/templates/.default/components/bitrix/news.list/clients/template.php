@@ -4,7 +4,7 @@
       <? if (strlen($item['PREVIEW_PICTURE']['SRC']) > 0):?>
       <div class="client__logo"><img src="<?=$item['PREVIEW_PICTURE']['SRC']?>"></div>
       <?endif;?>
-      <div class="client__name"><?=$item['NAME']?></div>
+      <div class="client__name"><?=$item['~NAME']?></div>
       <div class="client__description"><?=$item['~PREVIEW_TEXT']?></div>
       <div class="client__footer">
           <div class="row">
