@@ -5942,6 +5942,7 @@ ul.tabs {
   font-weight: bold;
   margin: 25px 0 20px;
   font-size: 20px;
+  line-height: 1.1;
 }
 .client__description {
   line-height: 1.4;
@@ -5951,9 +5952,8 @@ ul.tabs {
   text-align: center;
 }
 .client__logo img {
-  max-width: 100px;
+  max-width: 180px;
   max-height: 55px;
-  min-height: 55px;
 }
 .client__link {
   text-transform: uppercase;
