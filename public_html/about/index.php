@@ -1,7 +1,7 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle('About us');
-$APPLICATION->AddViewContent('title', "{GALLERY:4}");
+//$APPLICATION->AddViewContent('title', "{GALLERY:4}");
 ?>
 <div class="row">
   <div class="col-sm-6">

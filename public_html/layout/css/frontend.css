@@ -5366,6 +5366,7 @@ a.buttons__item:hover .buttons__title:hover {
   min-height: -moz-min-content;
   min-height: min-content;
   font-size: 80px;
+  border-bottom: 1px solid #fff;
 }
 @media (min-width: 1600px) {
   .slider__title {
@@ -5375,7 +5376,6 @@ a.buttons__item:hover .buttons__title:hover {
 .slider__text {
   font-weight: 500;
   line-height: 1.1;
-  border-top: 1px solid #fff;
   -webkit-align-self: flex-start;
   align-self: flex-start;
   -ms-flex-item-align: start;
@@ -5952,8 +5952,8 @@ ul.tabs {
   text-align: center;
 }
 .client__logo img {
-  max-width: 180px;
-  max-height: 55px;
+  max-width: 200px;
+  max-height: 75px;
 }
 .client__link {
   text-transform: uppercase;
