@@ -1807,6 +1807,8 @@ a.buttons__item:hover .buttons__title:hover {
   min-height: -moz-min-content;
   min-height: min-content;
   font-size: 80px;
+}
+.slider__title span {
   border-bottom: 1px solid #fff;
 }
 @media (min-width: 1600px) {
