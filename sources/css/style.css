@@ -1476,9 +1476,6 @@ svg g {
   flex: 1;
   padding-top: 80px;
 }
-.page--index .sidebar__footer {
-  display: none;
-}
 .sidebar__footer:before {
   content: "";
   position: relative;
@@ -1487,6 +1484,9 @@ svg g {
   height: 3px;
   margin-bottom: 25px;
   background-color: #606776;
+}
+.page--index .sidebar__address {
+  display: none;
 }
 .lang {
   margin: 20px 0 27px;
