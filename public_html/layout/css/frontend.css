@@ -5035,6 +5035,9 @@ svg g {
   flex: 1;
   padding-top: 80px;
 }
+.page--index .sidebar__footer {
+  display: none;
+}
 .sidebar__footer:before {
   content: "";
   position: relative;
